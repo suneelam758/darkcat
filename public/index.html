@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style>
+	body{
+		background-color: black;
+		
+	}
+	/*#ball{
+		height: 50px;
+		width: 50px;
+		border-radius: 100%;
+		background: orchid;
+		animation-name: ball;
+		animation-duration: 10s ;
+		animation-iteration-count: infinite;
+	}
+	@keyframes ball{
+		30%{margin-left: 50%;}
+		30%{margin-top: 20%;}
+		40%{margin-top: -20%;}
+		40%{margin-left: 0%;}
+		
+	}*/
+	.z{
+		display: flex;
+		margin-top: 10%;
+		margin-left: 40%;
+
+	}
+.ear{
+	height: 100px;
+	width: 100px;
+	background: #ffffff;
+	clip-path: polygon(0 0,100px 200px, 100px 100px);
+}
+.ear1{
+	height: 100px;
+	width: 100px;
+	background: #ffffff;
+	clip-path: polygon(0 0,100px 200px, 100px 100px);
+	transform: scaleX(-1);
+	margin-left: 100px;
+}
+.eye {
+	position: absolute;
+	top: 35%;
+	left: 40%;
+	height: 100px;
+	width: 120px;
+	background: white;
+	border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+.eye1 {
+	position: absolute;
+	top: 35%;
+	left: 53%;
+	height: 100px;
+	width: 120px;
+	background: white;
+	border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+.pupil{
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+	background: black;
+	margin-left: 35%;
+	margin-top: 20%;
+	animation-name: pupil;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+}
+@keyframes pupil{
+	0% { transform: translate(0) }
+		5% { transform: translate(50%, -25%) }
+		10% { transform: translate(50%, -25%) }
+		15% { transform: translate(-100%, -25%) }
+		20% { transform: translate(-100%, -25%) }
+		25% { transform: translate(0, 0) }
+		100% { transform: translate(0, 0) }
+}
+.eye::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 0;
+		width: 100%;
+		border-radius: 0 0 50% 50% / 0 0 40% 40%;
+		background: black;
+		animation: blink 4s infinite ease-in;
+	}
+	@keyframes blink {
+		0% { height: 0; }
+		90% { height: 0; }
+		92.5% { height: 100%; }
+		95% { height: 0; }
+		97.5% { height: 100%; }
+		100% { height: 0; }
+	}
+	.eye1::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 0;
+		width: 100%;
+		border-radius: 0 0 50% 50% / 0 0 40% 40%;
+		background: black;
+		animation: blinkk 4s infinite ease-in;
+	}
+	@keyframes blinkk {
+		0% { height: 0; }
+		90% { height: 0; }
+		92.5% { height: 100%; }
+		95% { height: 0; }
+		97.5% { height: 100%; }
+		100% { height: 0; }
+	}
+	.nose{
+		position: absolute;
+		top: 50%;
+		left: 51%;
+		height: 20px;
+		width: 30px;
+		background:white;
+		transform: translateX(-50%);
+		border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+	}
+	
+	
+</style>
+<body>
+	<div class="z">
+<div class="ear"></div>
+<div class="ear1"></div></div>
+<div class="eye"><div class="pupil"></div></div>
+<div class="eye1"><div class="pupil"></div></div>
+<div class="nose"></div>
+<div id="ball"></div>
+
+
+
+</body>
+</html>
